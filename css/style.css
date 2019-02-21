@@ -1,0 +1,227 @@
+body {
+    color: #fff;
+    font-family: cursive;
+    text-align: center;
+}
+
+#content {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "banner banner banner banner"
+        "banner banner banner banner"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer";
+    "footer footer footer footer";
+}
+
+
+
+/*header area */
+header {
+    padding: 2px;
+    grid-area: header;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        ". logo menu menu menu .";
+    background: #fcdb00;
+
+}
+
+.logo {
+    grid-area: logo
+}
+
+#main-menu {
+    grid-area: menu
+}
+
+#main-menu ul {
+    list-style-type: none;
+    float: right
+}
+
+#main-menu li {
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#main-menu li a {
+    color: #010101;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/*banner area */
+
+#banner {
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-template-areas:
+        ". textarea textarea imagearea imagearea . . ";
+    padding: 40px;
+    background: #fcdb00;
+
+
+
+}
+
+.textarea {
+    grid-area: textarea;
+    margin-top: 130px;
+
+}
+
+.bigtext {
+    display: block;
+    font-size: 30px;
+    font-family: 'Coiny', cursive;
+    font-weight: 300;
+    text-transform: capitalize;
+    grid-area: bigtext;
+}
+
+.smalltext {
+    display: block;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    grid-area: smalltext;
+}
+
+.description {
+    display: block;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.imagearea {
+    grid-area: imagearea;
+}
+
+
+/*main area */
+main {
+    color: #333;
+    grid-area: main;
+    background: #ffffff;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "bigtext bigtext bigtext"
+        "smalltext smalltext smalltext"
+        "feature feature feature"
+        "feature feature feature";
+}
+
+.feature {
+    grid-area: feature;
+}
+
+.feature ul {
+    list-style-type: none;
+
+}
+
+.feature li {
+    float: left;
+    width: 30%;
+    height: 200px;
+    margin: 1% 1%;
+
+}
+
+.feature-name {
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    grid-area: smalltext;
+}
+
+.feature img {
+    position: relative;
+    top: 30px;
+}
+
+.feature-desc {
+    display: block;
+    position: relative;
+    left: 37%;
+    width: 37%;
+    font-family: 'Oswald', sans-serif;
+    grid-area: smalltext;
+}
+
+
+
+
+
+
+footer {
+    padding: 10% 10%;
+    grid-area: footer;
+    background: #010101;
+    color: #fcdb00;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px,auto);
+    align-self: end;
+    grid-template-areas:
+        "bigtext bigtext bigtext "
+        "smalltext smalltext smalltext "
+        "contact-us contact-us contact-us"
+        "socail-icons socail-icons socail-icons"
+}
+
+footer .smalltext {
+    color: #555555;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.email-box {
+    width: 32%;
+    height: 31px;
+    padding: 10px;
+    font-size: 19px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    border-radius: 6px;
+    border: none;
+
+}
+
+.email-button {
+    grid-area: email-button;
+    width: 10%;
+    height: 51px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #fcdb00;
+    text-shadow: none;
+    border: 1px solid #fcc500;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+.email-button:hover{
+    color:#555555;
+    cursor: pointer;
+}
+.socail-icons{
+    grid-area: socail-icons;
+}
+
